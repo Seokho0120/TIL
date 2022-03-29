@@ -6,9 +6,11 @@
 
 **선언된 위치에 따라 유효 범위가 결정됨!**
 
+```javascript
 {
-블럭 안의 변수는 **블럭 안**에서만 유효
+블럭 안의 변수는 블럭 안에서만 유효
 }
+```
 
 이름 충돌 방지, 메모리 절약
 
@@ -18,18 +20,18 @@
 
 블럭 외부에서는 블럭 내부의 변수를 참조 X
 
-```
+```javascript
 {
-  const a = 'a'
+  const a = "a";
 }
-console.log(a)
+console.log(a);
 ```
 
 함수 외부에서는 함수 내부의 변수를 참조 X
 
-```
+```javascript
 function print() {
-  const message = 'Hello World';
+  const message = "Hello World";
   console.log(message);
 }
 console.log(message);
@@ -37,20 +39,18 @@ console.log(message);
 
 함수 외부에서는 함수의 매개변수를 참조 X
 
-```
+```javascript
 function sum(a, b) {
-  console.log(a, b)
+  console.log(a, b);
 }
-console.log(a, b)
+console.log(a, b);
 ```
-
----
 
 ## 퀴즈를 통해 이해해보자!
 
 밖에서는 참조 못함, 안에서는 참조 가능
 
-```
+```javascript
 {
   const x = 1;
   {
@@ -62,17 +62,15 @@ console.log(a, b)
 }
 ```
 
-```
-const text = 'global'; // 전역 변수, 전역 스코프 (글로벌 변수, 글로벌 스코프)
+```javascript
+const text = "global"; // 전역 변수, 전역 스코프 (글로벌 변수, 글로벌 스코프)
 {
-  const text = 'inside block1'; // 지역 변수(로컬 변수), 지역 스코프(로컬 스코프)
+  const text = "inside block1"; // 지역 변수(로컬 변수), 지역 스코프(로컬 스코프)
   {
     console.log(text); // inside block1
   }
 }
 ```
-
----
 
 ## GC = Garbage Collector(쓰레기 수집가)
 
@@ -81,13 +79,13 @@ const text = 'global'; // 전역 변수, 전역 스코프 (글로벌 변수, 글
 
 글로벌 변수는 앱이 종료될때까지 계속 메모리에 유지됨!
 
-```
+```javascript
 const global = 1;
 ```
 
 블록 내부에서만 존재하고, 블럭이 끝나면 자동으로 소멸됨(GC가 청소함)
 
-```
+```javascript
 {
   const local = 1;
 }
@@ -95,15 +93,13 @@ const global = 1;
 
 함수 내부에서도 블럭안에서 필요한 경우에는 필요한 곳에서! 블럭 안에서 변수를 선언하고 사용해야함!
 
-```
+```javascript
 function print() {
-  if(true) {
+  if (true) {
     let temp = 0;
   }
 }
 ```
-
----
 
 ## 실행컨텍스트 (Execution context)
 
@@ -127,13 +123,13 @@ function print() {
 
 - 현재의 스코프안에 내용이 없으면 바로 상위에 있는 스코프체인을 통해서 부모가 누구인지 확인 후, 부모에 해당하는 내용이 있는지 확인함
 
-```
-**메모리 절약**뿐만 아니라, **성능**을 위해서라도 변수는 최대한 **필요한 곳에서 정의**해야겠군!
+```javascript
+메모리 절약뿐만 아니라, 성능을 위해서라도 변수는 최대한 필요한 곳에서 정의해야겠군!
 ```
 
 <img width="1415" alt="스크린샷 2022-03-29 오후 4 16 15" src="https://user-images.githubusercontent.com/93597794/160557014-ee26e941-3e0a-4525-a598-7cff160490bd.png">
 
 ## 정리
 
-스코프란 식별자가 유효한 범위를 나타내는데, 스코프 밖에서는 내부에 접근할 수 없지만 내부에서는 외부에 있는 그 어떤 부모의 데이터에 접근 가능하다.
-접근할 수 있는 이유는 각각의 스코프는 렉시컬 환경이라는 곳이 있는데, 그 안에 외부 렉시컬 환경 참조를 통해서(스코프 체인을 통해서) 찾아가면서 부모에 접근할 수 있기 때문이다.
+**스코프**란 식별자가 유효한 범위를 나타내는데, 스코프 밖에서는 내부에 접근할 수 없지만 내부에서는 외부에 있는 그 어떤 부모의 데이터에 접근 가능하다.
+접근할 수 있는 이유는 각각의 스코프는 **렉시컬 환경**이라는 곳이 있는데, 그 안에 외부 **렉시컬 환경 참조를 통해서(스코프 체인을 통해서)** 찾아가면서 부모에 접근할 수 있기 때문이다.
