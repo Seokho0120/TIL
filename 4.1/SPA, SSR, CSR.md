@@ -13,7 +13,7 @@ CSR은 처음에 웹서버에 요청할 때 데이터가 없는 빈 문서를 �
 
 ![https://media.vlpt.us/images/holim0/post/dedbc0c5-a47f-4076-9606-af18c53e38cd/image.png](https://media.vlpt.us/images/holim0/post/dedbc0c5-a47f-4076-9606-af18c53e38cd/image.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c1e42cc7-bd3b-4918-bc93-cd635c556a12/Untitled.png)
+![image](https://user-images.githubusercontent.com/93597794/161497350-009187d8-ed8a-4dda-aae6-6aabfb2fa2cf.png)
 
 - 장점
   - 첫 로딩에서 HTML과 Static 파일들을 다 받으면, 동적으로 빠르게 렌더링하기 때문에 UX가 뛰어납니다.
@@ -28,7 +28,7 @@ CSR은 처음에 웹서버에 요청할 때 데이터가 없는 빈 문서를 �
 
 <br> 웹서버에 요청을 할 때마다 브라우저 새로고침이 일어나고 새로운 페이지는 서버에 요청하는 것입니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/21239549-6eed-46b6-98f5-e218ad9abcb4/Untitled.png)
+![image](https://user-images.githubusercontent.com/93597794/161497439-ec7988e8-30c1-4270-b5a1-171f9e917e66.png)
 
 - 장점
   - 초기 로딩 속도가 빠르기 때문에 사용자가 컨텐츠를 빨리 볼 수 있다.
