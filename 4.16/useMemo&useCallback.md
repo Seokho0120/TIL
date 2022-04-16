@@ -26,7 +26,7 @@ memoization이란 **기존에 수행한 연산의 결과값을 어딘가에 저�
 useMemo(() => fn, deps);
 ```
 
-- useMemo는 **deps**가 변한다면, **() => fn 이라는 함수를 실행**하고 그 값을 반환합니다. deps는 dependency이며, useMemo가 이 deps라는 것에 **'의존'**한다는 뜻.
+- useMemo는 **deps**가 변한다면, **() => fn 이라는 함수를 실행**하고 그 값을 반환합니다. deps는 dependency이며, useMemo가 이 deps라는 것에 **'의존'** 한다는 뜻.
 
 ## 예시
 
