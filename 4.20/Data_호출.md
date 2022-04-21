@@ -169,23 +169,3 @@ POST는 GET보다 복잡기 때문에 정리 해봅니다.
 
 post로 데이터를 보낼 때 JSON.stringify를 해주어야 하는 반면, **axios**는 **객체를 그대로 작성해도 되는 편리한 점**이 있습니다. <br>
 이렇듯 **axios**는 소소한 편의성을 제공해주고, 요청과 응답에 대한 확장성 있는 기능을 만들 수도 있습니다.
-
-```javascript
-
-```
-
-```javascript
-
-```
-
-```javascript
-
-```
-
-```javascript
-
-```
-
-```javascript
-
-```
